@@ -5,3 +5,5 @@
 => Pure Functions
 
 => Higher Order Functions
+
+=> Closures
