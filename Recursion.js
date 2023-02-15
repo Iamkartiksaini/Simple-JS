@@ -30,4 +30,14 @@ function Recursion(obj, key) {
   }
 }
 
-Recursion(obj, "obj");
+// Recursion(obj, "obj");
+
+// console.log("<===Recursion===>");
+// Code 1:
+
+let x = {},
+  y = { name: "Ronny" },
+  z = { name: "John" };
+x[y] = { name: "Vivek" };
+x[z] = { name: "Akki" };
+console.log(x[y]);
