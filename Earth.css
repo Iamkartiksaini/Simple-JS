@@ -1,0 +1,156 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #323233;
+  background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  overflow: hidden;
+  animation: stars 120s infinite ease-in-out;
+  background-repeat: repeat;
+  background-size: cover;
+
+  /* background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  ); */
+}
+@keyframes stars {
+  50% {
+    background-position: 900% 445%;
+  }
+}
+
+.scene {
+  flex-basis: 100%;
+  transform-style: preserve-3d;
+  padding: 50px;
+  /* background-color: rgba(6, 17, 65, 0.521); */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(2) rotate3d(1, 0, 0, 80deg);
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-image: url("https://images.pexels.com/photos/45208/world-earth-planet-globe-45208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: 325px;
+  background-position: center;
+  border: none;
+  transform: rotate3d(1, 0, 0, 300deg) translate3d(184px, 43px, 91px);
+  animation: earth 31s infinite ease-in-out;
+  /* translate3d(-100px, -53px, 289px) */
+  scale: 0.9 0.6;
+  box-shadow: 0px 0px 20px 1px black inset;
+}
+
+.Sun {
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  transform: rotate3d(1, 0, 0, 300deg) translate3d(0px, 0px, 200px);
+  box-shadow: 0px 0px 69px 13px yellow;
+}
+@keyframes earth {
+  50% {
+    background-position: 20% 25%;
+  }
+}
+.rotate {
+  color: aliceblue;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(36, 0, 0, 0) 0%,
+    rgba(9, 73, 121, 0) 59%,
+    rgb(5 235 216) 59%
+  );
+  border: 10px solid teal;
+  transform: translate3d(-51px, 175px, 102px) rotate3d(0, 1, 1, 0deg);
+  animation: rotate 5s 2.5s infinite;
+  transition: 0.3s;
+}
+.two {
+  color: aliceblue;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(36, 0, 0, 0) 0%,
+    rgba(9, 73, 121, 0) 59%,
+    rgb(59, 235, 5) 59%
+  );
+  border: 10px solid rgb(7, 68, 1);
+  animation: rotate2 5s 0.5s infinite;
+  transform: translate3d(-51px, 175px, 102px) rotate3d(1, 0, 1, 0deg);
+}
+.three {
+  color: aliceblue;
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(36, 0, 0, 0) 0%,
+    rgba(9, 73, 121, 0) 59%,
+    rgb(235, 181, 5) 59%
+  );
+  border: 10px solid red;
+  animation: rotate3 5s 1.5s infinite;
+  transform: translate3d(-51px, 175px, 102px) rotate3d(1, 1, 0, 360deg);
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate3d(-51px, 175px, 102px) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@keyframes rotate2 {
+  100% {
+    transform: translate3d(-51px, 175px, 102px) rotate3d(1, 0, 1, 360deg);
+  }
+}
+@keyframes rotate3 {
+  100% {
+    transform: translate3d(-51px, 175px, 102px) rotate3d(1, 1, 0, 0deg);
+  }
+}
+
+/* @keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+} */
