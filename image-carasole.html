@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-Image-Slider</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/ios-glyphs/344/pokemon--v2.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="img.css" />
+  </head>
+  <body>
+    <h1>Image Carasole</h1>
+
+    <div class="imgSlider">
+      <img
+        class="pre"
+        src="https://images.pexels.com/photos/12529340/pexels-photo-12529340.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
+        alt=""
+      />
+      <img
+        class="current"
+        src="https://images.pexels.com/photos/15579372/pexels-photo-15579372.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
+        alt=""
+      />
+      <img
+        class="next"
+        src="https://images.pexels.com/photos/12309506/pexels-photo-12309506.jpeg?auto=compress&cs=tinysrgb&w=300&lazy=load"
+        alt=""
+      />
+    </div>
+    <div class="buttons">
+      <button onclick="nextImg()">next</button>
+      <button onclick="preImg()">pre</button>
+    </div>
+    <script>
+      let img = document.querySelectorAll("img");
+      let imgSlider = document.querySelectorAll(".imgSlider");
+      console.log(imgSlider);
+      let pos1 = -50;
+      let pos2 = 20;
+      let pos3 = 88;
+      function nextImg() {
+        img.forEach((val, index) => {
+          if (val.classList == "pre") {
+            val.setAttribute("class", "current");
+            return;
+          }
+          if (val.classList == "current") {
+            val.setAttribute("class", "next");
+            return;
+          }
+          if (val.classList == "next") {
+            val.setAttribute("class", "pre");
+            return;
+          }
+        });
+      }
+      function preImg() {
+        img.forEach((val, index) => {
+          if (val.classList == "pre") {
+            val.setAttribute("class", "next");
+            return;
+          }
+          if (val.classList == "current") {
+            val.setAttribute("class", "pre");
+            return;
+          }
+          if (val.classList == "next") {
+            val.setAttribute("class", "current");
+            return;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

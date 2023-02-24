@@ -5,7 +5,8 @@ body {
 }
 
 body {
-  background-image: url("https://images.pexels.com/photos/1486974/pexels-photo-1486974.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-image: url("https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
   display: flex;
   background-color: #323232;
   flex-direction: column;
@@ -17,8 +18,8 @@ body {
 }
 .imgSlider {
   display: flex;
-  height: 450px;
-  width: 600px;
+  height: 50%;
+  width: 50vw;
   overflow: hidden;
   justify-content: center;
   padding: 40px;
@@ -41,11 +42,12 @@ body,
 .imgSlider img {
   border-radius: 10px;
   position: absolute;
-  top: 10%;
-  height: 400px;
-  width: 300px;
+  top: 2%;
+  height: calc(100%-50px);
+  width: 50%;
   transition: 0.5s ease-in-out;
   object-fit: cover;
+  margin-top: 10px;
 }
 h1 {
   padding: 10px 20px;
@@ -57,16 +59,18 @@ h1 {
 }
 
 .pre {
-  left: -20%;
+  /* left: -20%; */
   /* z-index: 2;
   scale: 0.8;
   top: 6%; */
-  left: -5%;
+  /* left: -5%; */
+  left: -10%;
   z-index: 2;
   scale: 0.5;
 }
 .current {
-  left: 30%;
+  /* left: 30%; */
+  left: 25%;
   scale: 1;
   z-index: 4;
 }
@@ -75,14 +79,15 @@ h1 {
   /* left: 80%;
   z-index: 3;
   scale: 0.8; */
-  left: 65%;
+  /* left: 65%; */
+  left: 60%;
   z-index: 3;
   scale: 0.5;
 }
 .buttons {
   position: absolute;
-  bottom: 10px;
-  left: 505;
+  bottom: 15%;
+  z-index: 7;
 }
 button {
   padding: 10px 20px;
